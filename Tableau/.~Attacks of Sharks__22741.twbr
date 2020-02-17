@@ -1,0 +1,1824 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.20.0119.2058                               -->
+<workbook source-build='2019.4.2 (20194.20.0119.2058)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='AttacksofSharks' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='attacks' inline='true' name='federated.1m2g37i0fgrje019us44u1pvod4t' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='attacks' name='textscan.0uue1660dnx1871g8el0u1np4b0c'>
+            <connection class='textscan' directory='/Users/borjauria/IRONHACK/dataptmad1019/module-2/tableau-project/Module-2-Project-Iron-Hack/Data/raw' filename='attacks.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0uue1660dnx1871g8el0u1np4b0c' name='attacks.csv' table='[attacks#csv]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Case Number' ordinal='0' />
+            <column datatype='date' date-parse-format='dd-MMM-yyyy|#|#|yyyy|#|#|MMM-yyyy|#|#|&apos;Reported&apos; dd-MMM-yyyy|#|#|&apos;Ca&apos;. yyyy' name='Date' ordinal='1' />
+            <column datatype='integer' name='Year' ordinal='2' />
+            <column datatype='string' name='Type' ordinal='3' />
+            <column datatype='string' name='Country' ordinal='4' />
+            <column datatype='string' name='Area' ordinal='5' />
+            <column datatype='string' name='Location' ordinal='6' />
+            <column datatype='string' name='Activity' ordinal='7' />
+            <column datatype='string' name='Name' ordinal='8' />
+            <column datatype='string' name='Sex ' ordinal='9' />
+            <column datatype='integer' name='Age' ordinal='10' />
+            <column datatype='string' name='Injury' ordinal='11' />
+            <column datatype='string' name='Fatal (Y/N)' ordinal='12' />
+            <column datatype='string' name='Time' ordinal='13' />
+            <column datatype='string' name='Species ' ordinal='14' />
+            <column datatype='string' name='Investigator or Source' ordinal='15' />
+            <column datatype='string' name='pdf' ordinal='16' />
+            <column datatype='string' name='href formula' ordinal='17' />
+            <column datatype='string' name='href' ordinal='18' />
+            <column datatype='string' name='Case Number 1' ordinal='19' />
+            <column datatype='string' name='Case Number 2' ordinal='20' />
+            <column datatype='integer' name='original order' ordinal='21' />
+            <column datatype='string' name='F23' ordinal='22' />
+            <column datatype='string' name='F24' ordinal='23' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Case Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Case Number]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Case Number</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Area]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Area</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Activity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Activity]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Activity</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex </remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sex ]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Sex </remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Injury</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Injury]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Injury</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fatal (Y/N)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Fatal (Y/N)]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Fatal (Y/N)</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Time]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Time</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Species </remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Species ]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Species </remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Investigator or Source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Investigator or Source]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Investigator or Source</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pdf</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pdf]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>pdf</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>href formula</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[href formula]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>href formula</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>href</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[href]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>href</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Case Number 1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Case Number 1]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Case Number 1</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Case Number 2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Case Number 2]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>Case Number 2</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[original order]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>original order</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F23</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F23]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>F23</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F24</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F24]</local-name>
+            <parent-name>[attacks.csv]</parent-name>
+            <remote-alias>F24</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Activity]' role='dimension' type='nominal' />
+      <column aggregation='None' datatype='string' name='[Area]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' hidden='true' name='[Case Number 1]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Case Number 2]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Case Number]' role='dimension' type='nominal' />
+      <column aggregation='None' datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' hidden='true' name='[F23]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[F24]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Injury]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Investigator or Source]' role='dimension' type='nominal' />
+      <column aggregation='None' datatype='string' name='[Location]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column datatype='string' hidden='true' name='[Name]' role='dimension' type='nominal' />
+      <column caption='Number of Attacks' datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Sex' datatype='string' name='[Sex ]' role='dimension' type='nominal' />
+      <column caption='Species' datatype='string' name='[Species ]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+      <column caption='Href Formula' datatype='string' hidden='true' name='[href formula]' role='dimension' type='nominal' />
+      <column caption='Href' datatype='string' hidden='true' name='[href]' role='dimension' type='nominal' />
+      <column caption='Original Order' datatype='integer' hidden='true' name='[original order]' role='measure' type='quantitative' />
+      <column caption='Pdf' datatype='string' hidden='true' name='[pdf]' role='dimension' type='nominal' />
+      <column-instance column='[Activity]' derivation='None' name='[none:Activity:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Injury]' derivation='None' name='[none:Injury:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/borjauria/Desktop/Databases/attacks.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>attacks.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>5597</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>1</ordinal>
+              <family>attacks.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>288</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Type</remote-alias>
+              <ordinal>2</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>3</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>155</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Area</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Area]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Area</remote-alias>
+              <ordinal>4</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>385</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Location</remote-alias>
+              <ordinal>5</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4674</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Activity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Activity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Activity</remote-alias>
+              <ordinal>6</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>928</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sex </remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sex ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sex </remote-alias>
+              <ordinal>7</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Age</remote-alias>
+              <ordinal>8</ordinal>
+              <family>attacks.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>111</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Injury</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Injury]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Injury</remote-alias>
+              <ordinal>9</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1867</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Fatal (Y/N)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Fatal (Y/N)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Fatal (Y/N)</remote-alias>
+              <ordinal>10</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Time</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Time</remote-alias>
+              <ordinal>11</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>229</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Species </remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Species ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Species </remote-alias>
+              <ordinal>12</ordinal>
+              <family>attacks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>749</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.757184' measure-ordering='alphabetic' measure-percentage='0.242816' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Unprovoked&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Questionable&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Sea Disaster&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Boating&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Provoked&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Boat&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Invalid&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Boatomg&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Activity:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Body boarding&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Surfing&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Diving&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Standing&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Fishing&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Bathing&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Swimming&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Snorkeling&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Wading&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Scuba diving&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Spearfishing&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Injury:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;No injury, board bitten&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Left foot bitten&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Right foot bitten&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Survived&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Leg bitten&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;FATAL&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;No details&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;No injury&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Hand bitten&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Foot bitten&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='INTRO'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6E11E6F5-3210-43B1-89B3-082FE02BD039}' />
+    </worksheet>
+    <worksheet name='Number of attacks by type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Helvetica Neue'>Number of attacks by type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='attacks' name='federated.1m2g37i0fgrje019us44u1pvod4t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m2g37i0fgrje019us44u1pvod4t'>
+            <column caption='Number of Attacks' datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Type:nk]' member='&quot;Boat&quot;' />
+              <groupfilter from='&quot;Provoked&quot;' function='range' level='[none:Type:nk]' to='&quot;Unprovoked&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Unprovoked&quot;</bucket>
+              <bucket>&quot;Provoked&quot;</bucket>
+              <bucket>&quot;Sea Disaster&quot;</bucket>
+              <bucket>&quot;Boat&quot;</bucket>
+              <bucket>&quot;Questionable&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]' value='53' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f1d9da</color>
+                <color>#f1c1c4</color>
+                <color>#f1a9ae</color>
+                <color>#f19198</color>
+                <color>#f27982</color>
+                <color>#f2606c</color>
+                <color>#f24855</color>
+                <color>#f2303f</color>
+                <color>#f21829</color>
+                <color>#f30013</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+              <text column='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{875B2766-AFD5-4A43-916C-B1AFC4361897}' />
+    </worksheet>
+    <worksheet name='Number of attacks in activity by injury'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Helvetica Neue'>Number of active attacks per injury and cause from 50 attacks</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='attacks' name='federated.1m2g37i0fgrje019us44u1pvod4t' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m2g37i0fgrje019us44u1pvod4t'>
+            <column datatype='string' name='[Injury]' role='dimension' type='nominal' />
+            <column caption='Number of Attacks' datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Injury]' derivation='None' name='[none:Injury:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Injury:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot; 3 fingers &amp; thigh lacerated, foot crushed&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot; 55  perished, some were  taken by sharks&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot; FATAL. Shark bite was minor injury, but he suffered a heart attack afterwards and died 6 hours later&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;\&quot;Badly bitten by shark\&quot;&quot;' />
+                  <groupfilter from='&quot;\&quot;Fearfully injured\&quot;&quot;' function='range' level='[none:Injury:nk]' to='&quot;\&quot;More than 20 persons severely bitten by sharks this year. Almost all were fatal\&quot;&quot;' />
+                  <groupfilter from='&quot;\&quot;Nose hanging by a threat, prints of shark&apos;s teeth over entire right cheek\&quot;&quot;' function='range' level='[none:Injury:nk]' to='&quot;\&quot;Serious injuries\&quot;&quot;' />
+                  <groupfilter from='&quot;\&quot;Severely bitten but recovered\&quot;&quot;' function='range' level='[none:Injury:nk]' to='&quot;\&quot;Slight laceration to leg\&quot;&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;\&quot;Very severe wounds\&quot;&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;“Put hand through hatch, shark nearly bit off thumb”&quot;' />
+                  <groupfilter from='&quot;1 man survived &amp; was rescued, sharks took the corpses of the two men that perished&quot;' function='range' level='[none:Injury:nk]' to='&quot;10-inch laceration to right foot&quot;' />
+                  <groupfilter from='&quot;106 bodies were recovered, some had been bitten by sharks&quot;' function='range' level='[none:Injury:nk]' to='&quot;15-20 puncture wounds to arm by captive shark  PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;192 survived, but 750 perished. Many were taken by sharks, including Levine&quot;' function='range' level='[none:Injury:nk]' to='&quot;2 lacerations to the thigh&quot;' />
+                  <groupfilter from='&quot;2 minor lacerations in foot&quot;' function='range' level='[none:Injury:nk]' to='&quot;2 puncture wounds to left foot, abrasion to right foot&quot;' />
+                  <groupfilter from='&quot;2 punctures in lower leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;2-inch wound on dorsum of right foot, 1-inch wound on sole&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;2.5\&quot; laceration on right hand&quot;' />
+                  <groupfilter from='&quot;2\&quot; laceration on left heel&quot;' function='range' level='[none:Injury:nk]' to='&quot;3 lacerated irregular wounds on anterior left thigh&quot;' />
+                  <groupfilter from='&quot;3 lacerations on  right leg by speared fish PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;3 lacerations to heel&quot;' />
+                  <groupfilter from='&quot;3 men knocked to ground by harpooned shark PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;3-inch laceration to right foot&quot;' />
+                  <groupfilter from='&quot;3\&quot; cut on sole of foot&quot;' function='range' level='[none:Injury:nk]' to='&quot;3\&quot; laceration to leg&quot;' />
+                  <groupfilter from='&quot;32 survived, 5 perished; sharks fed on the dead but did not bite the survivors&quot;' function='range' level='[none:Injury:nk]' to='&quot;5 lacerations to left foot&quot;' />
+                  <groupfilter from='&quot;5 minor puncture wounds to lower left leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;6 or 8 of the would-be rescuers were shot &amp; the rest were killed by sharks&quot;' />
+                  <groupfilter from='&quot;6 puncture wounds to left ankle&quot;' function='range' level='[none:Injury:nk]' to='&quot;7 rescued, 7 bodies recovered, 10 missing. Many sharks in crash area.&quot;' />
+                  <groupfilter from='&quot;8 to 10 puncture marks around knee&quot;' function='range' level='[none:Injury:nk]' to='&quot;9-inch gash in left foot&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;9\&quot; laceration to right forearm &quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;A \&quot;dead\&quot; shark grabbed by the tail bit his right torso PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;A cut on her hand&quot;' />
+                  <groupfilter from='&quot;A large shark rammed boat, breaking prop shaft. No injury to occupants but boat sank several hours later&quot;' function='range' level='[none:Injury:nk]' to='&quot;Abdomen &amp; thigh bitten&quot;' />
+                  <groupfilter from='&quot;Abdomen abraded when he seized shark PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Abrasion &amp; 6 puncture wounds on chest after grabbing the shark by its tail PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Abrasion on right foot, board bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Abrasion to chest&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Abrasion to leg from netted shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Abrasion to right hand, lacerations to left forearm&quot;' function='range' level='[none:Injury:nk]' to='&quot;Abrasions &amp; lacerations to left leg and hand&quot;' />
+                  <groupfilter from='&quot;Abrasions and lacerations to lower right leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;Abrasions to elbow; collided with shark&quot;' />
+                  <groupfilter from='&quot;Abrasions to left leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;After shark was speared &amp; hit on head, it bit the diver’s foot  PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;All 63 on board perished when the aircraft hit the water. Sharks hampered retrieval of bodies&quot;' />
+                  <groupfilter from='&quot;Am lacerated&quot;' function='range' level='[none:Injury:nk]' to='&quot;Ankle bitten when she accidently stepped on the shark  PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Ankle bitten, hand injured while striking shark&quot;' function='range' level='[none:Injury:nk]' to='&quot;Another diver shot shark, shark bit his left foream  PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Arm &amp; back bitten, heel lacerated&quot;' function='range' level='[none:Injury:nk]' to='&quot;Arm injured&quot;' />
+                  <groupfilter from='&quot;Arm injured when sharks rammed his boat&quot;' function='range' level='[none:Injury:nk]' to='&quot;Arm severely lacerated, surgically amputated&quot;' />
+                  <groupfilter from='&quot;Arm, hand, buttock, leg and thigh bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Arms broken by hooked shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Arms severely injured, surgically amputated&quot;' />
+                  <groupfilter from='&quot;As searchers approached wreckage, sharks circled one canoe &amp; seized oar from another.&quot;' function='range' level='[none:Injury:nk]' to='&quot;Bathing suit torn &amp; \&quot;imprints of the shark&apos;s teeth on his body\&quot;&quot;' />
+                  <groupfilter from='&quot;Biceps &amp; lower arm bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Bite to right leg/hip&quot;' />
+                  <groupfilter from='&quot;Bites on legs &amp; thighs&quot;' function='range' level='[none:Injury:nk]' to='&quot;Bitten on rear lower extremities&quot;' />
+                  <groupfilter from='&quot;Bitten on right leg above the ankle&quot;' function='range' level='[none:Injury:nk]' to='&quot;Board rammed by shark, skegs knocked loose &amp; 5&apos; strip of fiberglass torn off, thigh scratched by shark’s teeth&quot;' />
+                  <groupfilter from='&quot;Boat bitten by gaffed shark PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Boat followed shark; shark holed boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Bodies of 5 of the 6 men on board were bitten by by sharks. Sharks may have contributed to the death of some of them.&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Body not recovered FATAL&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Body not recovered, shorts found indicating shark bite on left side&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Bond&apos;s foot was injured, Kinch&apos;s back was injured&quot;' />
+                  <groupfilter from='&quot;Both arms &amp; leg bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Bruised but otherwise unhurt&quot;' />
+                  <groupfilter from='&quot;Bruised ribs &amp; tail bone, speargun broken and wetsuit cut&quot;' function='range' level='[none:Injury:nk]' to='&quot;Bruises &amp; minor injuries from reef, not the shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Bruises to arm and hand, laceration to lower leg &amp; minor injuries to foot&quot;' />
+                  <groupfilter from='&quot;Bumped by shark, legs abraded&quot;' function='range' level='[none:Injury:nk]' to='&quot;Bumped, then knee bitten&quot;' />
+                  <groupfilter from='&quot;Buttock &amp; leg bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Buttocks, thigh, left hand &amp; wrist injured&quot;' />
+                  <groupfilter from='&quot;Calf / knee injured?&quot;' function='range' level='[none:Injury:nk]' to='&quot;Captive shark bit air hose &amp; minor lacerations on diver&apos;s cheek PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Cause of death most likely drowning, remains recovered in shark&quot;' />
+                  <groupfilter from='&quot;Cause of death was drowning; his remains were scavenged by sharks&quot;' function='range' level='[none:Injury:nk]' to='&quot;Clothing torn by sharks&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Contusion of left foot&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Conway&apos;s leg was bitten Higgs injury was FATAL&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Cracked jaw &amp; broken tooth, shark took chunk out of surfboard&quot;' />
+                  <groupfilter from='&quot;Cut on finger, board bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Cuts to dorsal surface of left foot&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Cuts to right foot and ankle&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Davis&apos; leg was severed&quot;' />
+                  <groupfilter from='&quot;Deep cuts on lower leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;Details unknown, possibly a PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Disappeared, thought to have murdered or drowned or  taken by a sharks after entrails washed ashore&quot;' />
+                  <groupfilter from='&quot;Diver hit shark &amp; right forearm slightly injured PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Dorsum of foot lacerated &amp; toe severed&quot;' />
+                  <groupfilter from='&quot;Dorsum of left foot bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Dorsum of right foot lacerated&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Dr. A.R. Hernandez of ship Cabo Hornos treated passenger whose leg was severed by a shark&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Drowned when caught in line and pulled overboard by hooked shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Du Val&apos;s leg was bitten but he survived&quot;' />
+                  <groupfilter from='&quot;During the night both hands and feet were bitten, rescued next day after spending 17 hours in the sea.&quot;' function='range' level='[none:Injury:nk]' to='&quot;Elbow bitten&quot;' />
+                  <groupfilter from='&quot;Extensive injuries&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL Laceration to chest&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Fatal or drowning or scavenging&quot;' />
+                  <groupfilter from='&quot;FATAL PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL, 2 men killed by sharks, 20 survived&quot;' />
+                  <groupfilter from='&quot;FATAL, 2 of the 9 airmen killed by sharks&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL, both were killed by sharks&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;FATAL, but shark involvement uncomfirmed. Death may have been due to drowning.&quot;' />
+                  <groupfilter from='&quot;FATAL, buttock lacerated  &quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL, chest &amp; leg bitten &quot;' />
+                  <groupfilter from='&quot;FATAL, coroner&apos;s Verdict: \&quot;Death presumably through shark attack &amp; drowning\&quot;&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL, Drowned or crushed when harpooned shark smashed their boat PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;FATAL, due to drowning PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL, hips &amp; thigh bitten &quot;' />
+                  <groupfilter from='&quot;FATAL, hooked shark pulled him into the water PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL, presumed taken by a shark, body not recovered&quot;' />
+                  <groupfilter from='&quot;FATAL, PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL, shark bit leg, then dragged him underwater &quot;' />
+                  <groupfilter from='&quot;FATAL, shark leapt into raft and bit the man who died 4 hours later&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL, taken by shark, body not recovered. Twenty months later, in October 1937, meshing (setting anti-shark gill nets) began  at metropolitan beaches&quot;' />
+                  <groupfilter from='&quot;FATAL, thereafter canoes were used to carry the mail&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL, victim seen in shark&apos;s mouth&quot;' />
+                  <groupfilter from='&quot;FATAL?&quot;' function='range' level='[none:Injury:nk]' to='&quot;FATAL. Shark involvement suspected but not confirmed&quot;' />
+                  <groupfilter from='&quot;FATAL. Womack was injured when plane went down, 3 days later he fell off liferaft &amp; was taken by a shark  &quot;' function='range' level='[none:Injury:nk]' to='&quot;Feet grabbed&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Feet lacerated&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Feet severed&quot;' />
+                  <groupfilter from='&quot;Fin of hooked shark injured fisherman&apos;s forearm. . PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Finger bitten PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Finger lacerated&quot;' function='range' level='[none:Injury:nk]' to='&quot;Foot injured&quot;' />
+                  <groupfilter from='&quot;Foot lacerated&quot;' function='range' level='[none:Injury:nk]' to='&quot;Foot severely bitten, surgically amputated&quot;' />
+                  <groupfilter from='&quot;Foot severely lacerated&quot;' function='range' level='[none:Injury:nk]' to='&quot;Foot, leg  &amp; groin lacerated&quot;' />
+                  <groupfilter from='&quot;Forearm  &amp; hand bitten; tooth fragments of the shark were recovered from the surfer&apos;s hand&quot;' function='range' level='[none:Injury:nk]' to='&quot;Forefinger of right hand bitten by a \&quot;dead\&quot; shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Found at 21h30 by searchlight. Had been constantly harassed by sharks &amp; had numerous lacerations&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Four 1-inch puncture wounds on left foot&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Four lacerations to his ankle&quot;' />
+                  <groupfilter from='&quot;Gaffed shark bit his ankle PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Hand &amp; wrist bitten, tooth fragments in wound&quot;' />
+                  <groupfilter from='&quot;Hand abraded when he grabbed shark&apos;s tail PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Hand, arm &amp; thigh bitten&quot;' />
+                  <groupfilter from='&quot;Hand, thigh &amp; calf bitten by hooked shark PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Hands, legs &amp; buttocks lacerated&quot;' />
+                  <groupfilter from='&quot;Harpooned shark bit boat PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Harpooned shark, bit boat, causing it to ship water. Boat reached shore in sinking condition PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;He grabbed shark, it bit his leg below the knee PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;He tried to hit shark with paddle, shark bumped  ski  PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Head &amp; arm bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;His boat was holed by a shark&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;His feet were bitten by sharks, but he was rescued by a charter boat that arrived on the scene just an hour and 15 minutes after the sharks first appeared, too late to save the lives of Hayes and Beaver&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;His left leg was severely bitten&quot;' />
+                  <groupfilter from='&quot;Hit by tail of speared shark, fell &amp; hit head on rock &amp; out cold for 30 minutes  PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Hooked shark leapt onboard &amp; into fish well, which it smashed PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Human remains found in shark&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Human remains recovered from shark&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Human remains recovered in shark caught off Anguilla, probable scavenging on drowned body&quot;' />
+                  <groupfilter from='&quot;Injured&quot;' function='range' level='[none:Injury:nk]' to='&quot;Injured by sharks, but managed to swim ashore 6.5 hours later&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Injured while Sonieva was transferred to another canoe&quot;' />
+                  <groupfilter from='&quot;Injuries to abdomen and arm&quot;' function='range' level='[none:Injury:nk]' to='&quot;Injuries to hand and wrist&quot;' />
+                  <groupfilter from='&quot;Injuries to head &amp; torso&quot;' function='range' level='[none:Injury:nk]' to='&quot;Injuries to torso, hip, lower leg &amp; hands&quot;' />
+                  <groupfilter from='&quot;Injuries, if any, unknown, but afterwards diver stunned shark with iron bar&quot;' function='range' level='[none:Injury:nk]' to='&quot;Injury to ankle &amp; feet&quot;' />
+                  <groupfilter from='&quot;Injury to foot    PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Injury to left calf&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Injury to left thigh&quot;' />
+                  <groupfilter from='&quot;Injury to lower leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;It is probable that all 5 passengers died on impact. The body of one was scavenged by a shark&quot;' />
+                  <groupfilter from='&quot;It was believed that survivors were killed by sharks&quot;' function='range' level='[none:Injury:nk]' to='&quot;Jumped off cliff&quot;' />
+                  <groupfilter from='&quot;Knee &amp; calf lacerated&quot;' function='range' level='[none:Injury:nk]' to='&quot;Laceration &amp; puncture wounds to foot&quot;' />
+                  <groupfilter from='&quot;Laceration &amp; puncture wounds to right flank &amp; hip&quot;' function='range' level='[none:Injury:nk]' to='&quot;Laceration on right wrist &amp; crescent of puncture wounds on  forearm&quot;' />
+                  <groupfilter from='&quot;Laceration on the back of left hand &amp; toothmarks on wrist&quot;' function='range' level='[none:Injury:nk]' to='&quot;Laceration to foot from dead shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Laceration to foream&quot;' function='range' level='[none:Injury:nk]' to='&quot;Laceration to knee by speared shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Laceration to left ankle&quot;' function='range' level='[none:Injury:nk]' to='&quot;Laceration to lower left leg by hooked shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Laceration to lower leg   PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Laceration to thigh from trapped shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Laceration to toe&quot;' function='range' level='[none:Injury:nk]' to='&quot;Lacerations and punctures to foot&quot;' />
+                  <groupfilter from='&quot;Lacerations knee to ankle&quot;' function='range' level='[none:Injury:nk]' to='&quot;Lacerations to 2 fingers of left hand&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Lacerations to 3 fingers of left hand&quot;' />
+                  <groupfilter from='&quot;Lacerations to abdomen&quot;' function='range' level='[none:Injury:nk]' to='&quot;Lacerations to both hands while attempting to land a hooked shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Lacerations to both legs below the knees&quot;' function='range' level='[none:Injury:nk]' to='&quot;Lacerations to chest&quot;' />
+                  <groupfilter from='&quot;Lacerations to dorsum of right foot&quot;' function='range' level='[none:Injury:nk]' to='&quot;Lacerations to right ankle and calf&quot;' />
+                  <groupfilter from='&quot;Lacerations to right arm&quot;' function='range' level='[none:Injury:nk]' to='&quot;Lassoed shark bit his hand PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Left Achilles tendon severed, calf muscles severely lacerated&quot;' function='range' level='[none:Injury:nk]' to='&quot;Left ankle broken &amp; lacerated&quot;' />
+                  <groupfilter from='&quot;Left ankle nipped (3 punctures wounds)&quot;' function='range' level='[none:Injury:nk]' to='&quot;Left foot bitten after he accidentally stepped on the shark         PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Left foot bitten by hooked shark PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Left forearm grazed &amp; puncture marks in wetsuit&quot;' />
+                  <groupfilter from='&quot;Left forearm severely bitten, surgically amputated&quot;' function='range' level='[none:Injury:nk]' to='&quot;Left hand bitten by shark he was dragging ashore by its head PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Left hand injured: gash on back of hand, toothmarks on palm&quot;' function='range' level='[none:Injury:nk]' to='&quot;Left leg severed below the knee, defense injuries to left hand&quot;' />
+                  <groupfilter from='&quot;Left leg severely bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Leg severely lacerated PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Leg, foot &amp; arm bitten&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Leg, forearm &amp; hand severely bitten&quot;' />
+                  <groupfilter from='&quot;Legs &amp; board bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Lower left leg bittten, hand abraded&quot;' />
+                  <groupfilter from='&quot;Lower left leg injured PROVOKED ACCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Lower part of body found 6 days later, x-rays revealed teeth marks in femur &amp; tibia&quot;' />
+                  <groupfilter from='&quot;Lower right  leg bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Man landed at Cape Levêque lighthouse in critical condition after being bitten by a shark. Not known if he survived.&quot;' />
+                  <groupfilter from='&quot;Many of the crew were taken by sharks&quot;' function='range' level='[none:Injury:nk]' to='&quot;Massive wound on right thigh with femur exposed&quot;' />
+                  <groupfilter from='&quot;Middle finger of left hand &amp; right forearm lacerated&quot;' function='range' level='[none:Injury:nk]' to='&quot;Minor&quot;' />
+                  <groupfilter from='&quot;Minor bite on foot &amp; swimfin&quot;' function='range' level='[none:Injury:nk]' to='&quot;Minor cuts above his right eye&quot;' />
+                  <groupfilter from='&quot;Minor cuts on left hand, body board bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Minor injuries to foot&quot;' />
+                  <groupfilter from='&quot;Minor injuries to hand&quot;' function='range' level='[none:Injury:nk]' to='&quot;Minor injury to torso&quot;' />
+                  <groupfilter from='&quot;Minor injury when shark tore off his boot&quot;' function='range' level='[none:Injury:nk]' to='&quot;Minor lacerations &amp; abrasions on forearm&quot;' />
+                  <groupfilter from='&quot;Minor lacerations &amp; puncture wounds to right leg from netted shark taken onboard skiboat PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Minor lacerations to left heel and big toe&quot;' />
+                  <groupfilter from='&quot;Minor lacerations to leg &amp; foot&quot;' function='range' level='[none:Injury:nk]' to='&quot;Minor punctures &amp; lacerations on left hand&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Minor wound to lower right leg &amp; surfboard bitten&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Missing, believed taken by a shark&quot;' />
+                  <groupfilter from='&quot;Mistook shark&apos;s tail for kelp &amp; grabbed it, legs abraded by shark&apos;s fins PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Multiple superficial lacerations of leg, arm &amp; hand PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Navy personnel recovered 19 shark-scavenged bodies&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Netted shark injured his am &amp; 6 fingers PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Netted shark made a5-inch incision above the knee PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Next day 2 bodies recovered from sharks&quot;' function='range' level='[none:Injury:nk]' to='&quot;Nipped on shoulder by captive shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No details&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury  PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury &amp; not on board. Board adrift when bitten by shark&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury but shark bit SUP&quot;' />
+                  <groupfilter from='&quot;No injury but shark lifted boat out of the water&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury from shark&quot;' />
+                  <groupfilter from='&quot;No injury PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to diver, speargun damaged&quot;' />
+                  <groupfilter from='&quot;No injury to fisherman Alf Dean &amp; other occupants; shark bit stern of boat&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupant&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupant, but  a shark chasing a hooked fish holed his boat above the waterline&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupant, canoe  bitten &amp; overturned by shark&quot;' />
+                  <groupfilter from='&quot;No injury to occupant, canoe struck several times by shark &quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupant, netted shark rammed &amp; bit boat PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury to occupant, rammed oar in shark&apos;s mouth and it bit the oar &quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupant, shark bit boat&quot;' />
+                  <groupfilter from='&quot;No injury to occupant, shark bit outboard motor&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupant, shark bit propeller of outboard motor&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupant, shark chasing barracuda tied to the stern rammed skiff &amp; slashed the motor&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupant, shark grabbed anchor rope, pulling bow of boat downward &amp; then bit bow of boat&quot;' />
+                  <groupfilter from='&quot;No Injury to occupant, shark holed and sank boat&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupant, shark rammed boat catapulting it out of the water&quot;' />
+                  <groupfilter from='&quot;No injury to occupant, shark removed small auxiliary outboard motor&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupant, shark took hooked fish then bit stern of boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupant; shark bit propeller&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupant; shark capsized boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupant; shark leapt into boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupant: shark bit boat&apos;s port chine&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupant. Kayak bitten by gaffed shark. PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury to occupant. Shark rammed bottom of the boat&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants , shark nudged oars&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants but hull splintered by harpooned shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants,  harpooned shark sank boat PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury to occupants, After shark was harpooned &amp; shot, it holed the boat PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants, boat holed by hooked shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, boat scratched by shark&quot;' />
+                  <groupfilter from='&quot;No injury to occupants, boat&apos;s rear platform bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants, but shark struck boat with such force that Chandler was flung overboard. PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury to occupants, hooked shark attacked boat PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants, hooked shark, snapped at rudder &amp; then attacked boat PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, hull of ski bitten&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, hydrofoil of outboard motor bitten &quot;' />
+                  <groupfilter from='&quot;No injury to occupants, one of the boat&apos;s flotation tanks holed PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants, pontoon punctured&quot;' />
+                  <groupfilter from='&quot;No injury to occupants, shark bit 2 of the dinghy&apos;s 3 floation chambers&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants, shark bit boat&quot;' />
+                  <groupfilter from='&quot;No injury to occupants, shark bit oar and rudder&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants, shark buckled prop shaft&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark bumped boat&quot;' />
+                  <groupfilter from='&quot;No injury to occupants, shark charged boat after being shot twice with pistol and speared PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants, shark crashed through windshield of boat&quot;' />
+                  <groupfilter from='&quot;No injury to occupants, shark grabbed prop, Leodorn hit shark with oar, shark bit oar in half PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants, shark holed  boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark holed the transom-mounted livewell &quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark jumped onboard, knocking 2 anglers onto the deck&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark leapt on bow of boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark lifted boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark lifted bow of boat 3 times&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark rammed &amp; bit  boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark rammed boat, bit planks &amp; sheared off copper rivet at stern of boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark rammed bow, driving its head into the hull&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, shark struck boat&quot;' />
+                  <groupfilter from='&quot;No injury to occupants, shark took a gaffed fish they were bringing aboard &amp; hit their boat&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants, sharks tore Max Butcher&apos;s life jacket &amp; pants&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, They fought off sharks &amp; killed one with an automatic. Rescued 34 days later&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants, toothmarks on bottom &amp; side of dinghy&quot;' />
+                  <groupfilter from='&quot;No injury to occupants; boat damaged&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants; hooked shark tore out part of transom, bit skeg of motor and snapped the steel trace PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants; shark bit propeller&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants; shark bit rudder&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants; shark circled boat repeatedly then rammed the vessel 3 times&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants; shark leapt into boat, almost capsizing it and destroyed the inside of the boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants; shark rammed boat 4 times, bit engine &amp; cracked the hull&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants; shark ripped off fibreglass hull, swamping boat PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury to occupants. After being prodded with an oar, shark struck bow and sank boat PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants. Shark  gouged planks of boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants. Shark bit boat&apos;s swim step &amp; repeatedly pushed the boat away whenever if came within 4 to 5 m of the whale carcass&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants. Shark bit motor, lifting stern a half-metre out of the water&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants. Shark grabbed anchor&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants. Shark holed boat &amp; they swam 200 yards to shore&quot;' />
+                  <groupfilter from='&quot;No injury to occupants. Shark leapt into boat, momentarily pinning Crew against the side&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury to occupants. Shark struck boat, lifting the outboard motor&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury to occupants. They shot shark, then it capsized their skiff. PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury to surf-skiier, shark holed ski&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury,  shark leapt into boat &amp; bit one of the boat&apos;s seats&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, 8 pressure dings in surboard&quot;' />
+                  <groupfilter from='&quot;No injury, after kayak collided with the shark, it bit the rudder  PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, boat towed by harpooned shark, PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury, bumped  by sharks&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, but 2 small nicks on wetsuit&quot;' />
+                  <groupfilter from='&quot;No injury, but fin lost from surfboard&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, but swim fin bitten &amp; torn&quot;' />
+                  <groupfilter from='&quot;No injury, but trouser leg shredded by shark&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, catapulted into the water &amp; ski damage&quot;' />
+                  <groupfilter from='&quot;No injury, chunk missing from surfboard&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, diver shot shark &amp; it bit his speargun PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury, flung from surfboard by the shark&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, hooked shark rammed tripod PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury, knocked into water &amp; board bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, netted shark dragged them 350 metres out to sea PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury, overalls ripped by shark&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark &amp; board collided&quot;' />
+                  <groupfilter from='&quot;No injury, shark approached the boat, he hit it with and oar and fell into the sea PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark bit hole in ski&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark bit nose of surfboard&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark bit oar&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark bit off stern of kayak&quot;' />
+                  <groupfilter from='&quot;No injury, shark bit paddleboard&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark bit rear of paddleboard&quot;' />
+                  <groupfilter from='&quot;No injury, shark bit scuba gear&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark bit the dinghy&quot;' />
+                  <groupfilter from='&quot;No injury, shark brushed ski&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark bumped ski&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark bumped surfboard&quot;' />
+                  <groupfilter from='&quot;No injury, shark charged &amp; impaled itself on spear&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark grabbed hood&quot;' />
+                  <groupfilter from='&quot;No injury, shark grabbed scuba tank and descended to 110&apos; before releasing him &quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark hit swim fin&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark leapt on surfboard&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark nipped diving suit after he prodded the shark PROVOKED INCIDENT &quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark nudged boat and bit propeller&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark nudged raft and circled for 2 hrs.&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark nudged surfboard&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark rammed his back&quot;' />
+                  <groupfilter from='&quot;No injury, shark rammed surfboard&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark shook kayak x3 &quot;' />
+                  <groupfilter from='&quot;No injury, shark snagged its teeth in diver&apos;s suit&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark struck his leg&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark struk sufer&apos;s leg and his board&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury, shark took chunk out of surfboard&quot;' />
+                  <groupfilter from='&quot;No injury, shark took his catch, then towed &amp; pushed diver through the water &quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark tore his wetsuit after he grabbed it by the tail  PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;No injury, shark towed  surfer &amp; board&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, shark&apos;s teeth embedded in boat&quot;' />
+                  <groupfilter from='&quot;No injury, sharks rammed boat and bit outboard motor&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, ski bumped &amp; he was thrown in the water. Ski had indentations&quot;' />
+                  <groupfilter from='&quot;No injury, ski severely damaged&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, swim fin bitten&quot;' />
+                  <groupfilter from='&quot;No injury, swim fin ripped off&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, teethmarks in board &amp; torn wetsuit&quot;' />
+                  <groupfilter from='&quot;No injury, the shark knocked him off his feet&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury, wetsuit torn &amp; board bitten&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury: Knocked off board by shark&quot;' />
+                  <groupfilter from='&quot;No injury. Copper breastplate &amp; harness bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury. His hand entangled in line of hooked shark. He was pulled overboard &amp; towed 150&apos; PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury. Leg rope severed, knocked off board by shark&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;No injury. Shark grabbed fish attached to his belt &amp; towed him seaward.&quot;' />
+                  <groupfilter from='&quot;No injury. Shark made threat display, then diver shot the shark PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No injury. Shark took string of fish then struck canoe&quot;' />
+                  <groupfilter from='&quot;No injury. Towed by speared shark PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;No inury&quot;' />
+                  <groupfilter from='&quot;No inury, board broken in half by shark&quot;' function='range' level='[none:Injury:nk]' to='&quot;Non-fatal&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Non-fatal, treated at Misima Hospital&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Non-swimmer pulled off pier&amp; into the water by a hooked shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Not injured by shark but board bitten&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Note: see 1992.06.28&quot;' />
+                  <groupfilter from='&quot;Numerous puncture wounds to leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;Of 9 bodies recovered, one was bitten by a shark&quot;' />
+                  <groupfilter from='&quot;Of her crew of 50, eight perished, including the two injured men&quot;' function='range' level='[none:Injury:nk]' to='&quot;Of the 42 people on board, 5 died of exposure, others drowned or were taken by sharks, and survivors were rescued after spending 3 days in the water.&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;One body sighted but not recovered due to shark activity&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;One leg severed by the shark, the other surgically amputated&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;One man drove a knife through rubberized canvas trying to stab a shark &amp; it injured him with its tail PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;One man was killed by a shark, the other was injured&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;One was bitten on the leg, the other on the arm&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Only 170 survived, many of the crew were said to have been taken by sharks&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Over a period of a week men in the water died of wounds, thirst &amp; sharks. George Sullivan, the last of the Sullivan brothers, survived for 5 days &amp; then was killed by 3 sharks.&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Part of buttocks &amp; fingers severed&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Part of hand removed by shark he had caught PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Passengers taken by sharks&quot;' function='range' level='[none:Injury:nk]' to='&quot;Pieces of clothing &amp; human flesh recovered by Fire Department divers who encountered a large shark&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Possibly a PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Posterior left ankle bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Posterior thigh bitten&quot;' />
+                  <groupfilter from='&quot;Presumed FATAL&quot;' function='range' level='[none:Injury:nk]' to='&quot;Presumed FATAL, body not recovered&quot;' />
+                  <groupfilter from='&quot;Presumed fatal, no body recovered, shark mutilated wetsuit &amp; harness recovered &quot;' function='range' level='[none:Injury:nk]' to='&quot;Presumed FATAL, severed hand recovered&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Probable drowning&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Probable drowning &amp; scavenging&quot;' />
+                  <groupfilter from='&quot;PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Puncture marks in leg &amp; surfboard dinged&quot;' />
+                  <groupfilter from='&quot;Puncture marks on left foot&quot;' function='range' level='[none:Injury:nk]' to='&quot;Puncture wound to left ankle&quot;' />
+                  <groupfilter from='&quot;Puncture wounds &amp; 2-inch laceration to calf&quot;' function='range' level='[none:Injury:nk]' to='&quot;Puncture wounds on heel, legs and buttocks&quot;' />
+                  <groupfilter from='&quot;Puncture wounds on knee&quot;' function='range' level='[none:Injury:nk]' to='&quot;Quadriceps lacerated, femur exposed&quot;' />
+                  <groupfilter from='&quot;R. Roberts&apos; leg was bruised when shark leapt into boat&quot;' function='range' level='[none:Injury:nk]' to='&quot;Recovered at Thursday Island Hospital&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Recuers fought sharks for the bodies&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Remains of 3 humans recovered from shark, but shark involvement prior to death unconfirmed&quot;' />
+                  <groupfilter from='&quot;Remains of soldier in uniform. Probable drowning &amp; scavenging&quot;' function='range' level='[none:Injury:nk]' to='&quot;Remains recovered days later from shark&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Reported to have had \&quot;2 fights with sharks\&quot; before being rescued by the British freighter Dorsetafter 23 hours in the water&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Reportedly FATAL but few details&quot;' />
+                  <groupfilter from='&quot;Rescue aircraft saw bodies in the water being bitten by sharks. One survivor saw a shark take off a man’s leg &amp; another reported that the second cook was killed by a shark&quot;' function='range' level='[none:Injury:nk]' to='&quot;Right leg &amp; shoulder lacerated&quot;' />
+                  <groupfilter from='&quot;Right leg bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Right wrist bitten&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Samoan missionary, Filemani, caught an 8&apos;6\&quot; shark after it had killed 1 man &amp; 2 boys in space of few weeks&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Scrape on head. Recorded as PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Scratches on right upper arm&quot;' />
+                  <groupfilter from='&quot;Serious injury to left leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;Shark &amp; board collided. No injury, but board was dented&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark attacked his boat, threatening to capsize it. He jumped overboard &amp; shark bit his arm. He knifed &amp; killed shark. Later his arm was surgically amputated&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark became tangled in his surfboard leash. The surfer was not injured&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark bit 8\&quot; chunk from swim fin&quot;' />
+                  <groupfilter from='&quot;Shark bit diver&apos;s sleeve after he patted it on the head PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Shark bit rudder &amp; hull&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark bit swimfin after diver kicked shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark breached hull of boat&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark brushed past, minor injuries if any&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark bumped Colleen, the nudged Scott, then bit Frisbee &amp; swam away with it&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark bumped him&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark bumped right ankle&quot;' />
+                  <groupfilter from='&quot;Shark following hooked fish, rammed &amp; holed boat&quot;' function='range' level='[none:Injury:nk]' to='&quot;Shark grazed leg, leaving toothmarks&quot;' />
+                  <groupfilter from='&quot;Shark jumped from sea, taking fish &amp; his right arm&quot;' function='range' level='[none:Injury:nk]' to='&quot;Shark jumped in boat, hitting her in the face &amp; knocking her unconscious&quot;' />
+                  <groupfilter from='&quot;Shark knocked him down &amp; tore clothing of the rescuer&quot;' function='range' level='[none:Injury:nk]' to='&quot;Shark lacerated his hand when he grabbed it by the tail PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Shark leapt into boat, hitting Fanie Schoeman on his back before sliding into the sea&quot;' function='range' level='[none:Injury:nk]' to='&quot;Shark leapt into boat, pinning Mamacos beneath and fracturing his pelvis, then trashed the boat rendering it inoperable&quot;' />
+                  <groupfilter from='&quot;Shark leapt onto surfboard; surfer uninjured&quot;' function='range' level='[none:Injury:nk]' to='&quot;Shark rammed boat, breaching its hull&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark rammed diver after he shot it in the head  PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Shark rammed kayak, no injury to occupant  PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Shark scavenged on the dead sailors&quot;' function='range' level='[none:Injury:nk]' to='&quot;Sharks attacked the swimmers. The sole survivor lost his arm &amp; foot &amp; died of his injuries shortly after being picked up  by Javanese fishermen. The incident became known as the Cheribon Atrocity&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Sharks prevented recovery of remains&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Sharks said to have killed some of the 80 people lost&quot;' />
+                  <groupfilter from='&quot;Sharks’s jaws snapped shut, lacerating his right hand PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Shin lacerated&quot;' />
+                  <groupfilter from='&quot;Shot shark, then it bit him. Puncture wounds on leg  PROVOKED INCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Single laceration on ankle &amp; board bitten&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Single puncture wound to arm&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Six puncture wounds on  leg&quot;' />
+                  <groupfilter from='&quot;Slight injuries to left knee &amp; calf&quot;' function='range' level='[none:Injury:nk]' to='&quot;Slightly injured when he stepped on a shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Small bruise to calf&quot;' function='range' level='[none:Injury:nk]' to='&quot;Speared small shark, shark bit his thigh and/or buttock PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Stepped on shark PROVOKED INCIDENT&quot;' />
+                  <groupfilter from='&quot;Struck by fin on chest &amp; leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;Superficial injuries to left foot &amp; ankle&quot;' />
+                  <groupfilter from='&quot;Superficial injury to calf by hooked shark PROVOKED ACCIDENT&quot;' function='range' level='[none:Injury:nk]' to='&quot;Superficial laceration to shoulder&quot;' />
+                  <groupfilter from='&quot;Superficial lacerations on right leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;Survived&quot;' />
+                  <groupfilter from='&quot;Survived, but suffered a “forequarter amputation”&quot;' function='range' level='[none:Injury:nk]' to='&quot;Survived? Admitted to Thursday Island Hospital&quot;' />
+                  <groupfilter from='&quot;Survived. R.A.F. pilot, seeing commotion in the water, dived his plane to investigate and scared off shark&quot;' function='range' level='[none:Injury:nk]' to='&quot;Suttie&apos;s lower abdomen was bitten, Murray disappeared (presumed drowned)&quot;' />
+                  <groupfilter from='&quot;Swim fin &amp; foot bitten&quot;' function='range' level='[none:Injury:nk]' to='&quot;Swimfin &amp; knee bitten&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;The boy&apos;s foot was bitten&quot;' />
+                  <groupfilter from='&quot;The shark &amp; man simply collided; neither were injured&quot;' function='range' level='[none:Injury:nk]' to='&quot;Thought to have been taken by a shark&quot;' />
+                  <groupfilter from='&quot;Three small lacerations/ punctures to right foot&quot;' function='range' level='[none:Injury:nk]' to='&quot;Thumb &amp; 2 fingers severed&quot;' />
+                  <groupfilter from='&quot;Thumb &amp; finger nipped&quot;' function='range' level='[none:Injury:nk]' to='&quot;Torso bitten&quot;' />
+                  <groupfilter from='&quot;Torso bitten with pneumothorax, slight lacerations on left hand&quot;' function='range' level='[none:Injury:nk]' to='&quot;Torso nipped&quot;' />
+                  <groupfilter from='&quot;Tossed in air by shark, sustained abrasions&quot;' function='range' level='[none:Injury:nk]' to='&quot;Two 6-inch lacerations&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Two fingers lost PROVOKED INCIDENT&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Two half-inch lacerations on right heel and one near small toe&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Two toes broken &amp; lacerated&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;U.S. destroyer John W. Weeks, 6 miles offshore, demonstrating guns &amp; bombs for Mexican officials was thought to have driven the shark into the shallows where it bit the bather before other bathers drove it away with sticks &amp; clubs.&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;Underside of board, fins and, harness were damaged, and left  hip, thigh and buttock sustained puncture wounds&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;unknown&quot;' />
+                  <groupfilter from='&quot;Unknown, but survived&quot;' function='range' level='[none:Injury:nk]' to='&quot;Wetsuit lacerated&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;When survivors werer rescued on 10/27/1944 by PC 623 there were many sharks in the area&quot;' />
+                  <groupfilter function='member' level='[none:Injury:nk]' member='&quot;When taken back on board 2 hours later both legs were bleeding from shark bites&quot;' />
+                  <groupfilter from='&quot;Wounds to upper thigh and lower leg&quot;' function='range' level='[none:Injury:nk]' to='&quot;Wrist lacerated PROVOKED INCIDENT&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Injury:nk]' direction='ASC' using='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+          <filter class='categorical' column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Type:nk]' member='&quot;Boat&quot;' />
+              <groupfilter from='&quot;Provoked&quot;' function='range' level='[none:Type:nk]' to='&quot;Unprovoked&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Unprovoked&quot;</bucket>
+              <bucket>&quot;Provoked&quot;</bucket>
+              <bucket>&quot;Sea Disaster&quot;</bucket>
+              <bucket>&quot;Boat&quot;</bucket>
+              <bucket>&quot;Questionable&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]</column>
+            <column>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Injury:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' data-class='subtotal' value='26' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='subtotal' scope='rows' value='22' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='4' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f1d9da</color>
+                <color>#f1c1c4</color>
+                <color>#f1a9ae</color>
+                <color>#f19198</color>
+                <color>#f27982</color>
+                <color>#f2606c</color>
+                <color>#f24855</color>
+                <color>#f2303f</color>
+                <color>#f21829</color>
+                <color>#f30013</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+              <color column='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+              <text column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]' />
+              <text column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Injury:nk]' />
+              <text column='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='Helvetica Neue' fontsize='18'>&lt;[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontname='Helvetica' fontsize='15'>&lt;[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Injury:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontname='Helvetica'>&lt;[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Injury:nk]</field>
+                  <field>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Type:nk]</field>
+                  <field>[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;FATAL&quot;</value>
+                <value>&quot;Unprovoked&quot;</value>
+                <value>721</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{E40514F1-4586-47AD-8791-995BAB04EBC4}' />
+    </worksheet>
+    <worksheet name='Shark attacks by location'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Helvetica Neue'> Number of attacks by state (USA)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='attacks' name='federated.1m2g37i0fgrje019us44u1pvod4t' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1m2g37i0fgrje019us44u1pvod4t'>
+            <column datatype='string' name='[Activity]' role='dimension' type='nominal' />
+            <column aggregation='None' datatype='string' name='[Area]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='Number of Attacks' datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Activity]' derivation='None' name='[none:Activity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Area]' derivation='None' name='[none:Area:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Activity:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter from='&quot;.&quot;' function='range' level='[none:Activity:nk]' to='&quot;Body found on deserted luxury yacht, 38’ Christine&quot;' />
+                  <groupfilter from='&quot;Body surfing / treading water&quot;' function='range' level='[none:Activity:nk]' to='&quot;Scooping prawns&quot;' />
+                  <groupfilter from='&quot;Scuba Diving&quot;' function='range' level='[none:Activity:nk]' to='&quot;Small vessel with 13 men on board capsized crossing the bar and 6 men drowned.  The 7 survivors were swimming to shore&quot;' />
+                  <groupfilter from='&quot;Snorkeling – hunting crayfish and abalone&quot;' function='range' level='[none:Activity:nk]' to='&quot;Wade-fishing&quot;' />
+                  <groupfilter from='&quot;Wading (shrimping)&quot;' function='range' level='[none:Activity:nk]' to='&quot;Zosimo &amp; his son, Jeffrey Popa, failed to return from overnight fishing trip in a 14&apos; boat, Boat apparently sank, debris recovered but his son &amp; boat were never found&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Area:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Alabama&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;California&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Connecticut&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Delaware&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Florida&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Georgia&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Hawaii&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Illinois&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Louisiana&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Maryland&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Massachusetts&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Mississippi&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;New Jersey&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;New York&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;North Carolina&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Oregon&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Rhode Island&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;South Carolina&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Texas&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Virginia&quot;' />
+              <groupfilter function='member' level='[none:Area:nk]' member='&quot;Washington&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Activity:nk]</column>
+            <column>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Area:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[Longitude (generated)]' field-type='quantitative' max='-7710585.3670279514' min='-17938390.404499568' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[Latitude (generated)]' field-type='quantitative' max='7081590.3675857848' min='636225.47032509814' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' palette='red_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Area:nk]' />
+              <color column='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+              <geometry column='[federated.1m2g37i0fgrje019us44u1pvod4t].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m2g37i0fgrje019us44u1pvod4t].[Latitude (generated)]</rows>
+        <cols>[federated.1m2g37i0fgrje019us44u1pvod4t].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{346919A6-78FB-4587-8FFD-D3F673AF50DC}' />
+    </worksheet>
+    <worksheet name='Top 10 shark attacks by activity'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Helvetica Neue'>Top 10 shark attacks by activity</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='attacks' name='federated.1m2g37i0fgrje019us44u1pvod4t' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1m2g37i0fgrje019us44u1pvod4t'>
+            <column datatype='string' name='[Activity]' role='dimension' type='nominal' />
+            <column caption='Number of Attacks' datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Activity]' derivation='None' name='[none:Activity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Activity:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Number of Records])' function='order' user:ui-marker='order'>
+                <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter from='&quot;.&quot;' function='range' level='[none:Activity:nk]' to='&quot;Body found on deserted luxury yacht, 38’ Christine&quot;' />
+                  <groupfilter from='&quot;Body surfing / treading water&quot;' function='range' level='[none:Activity:nk]' to='&quot;Scooping prawns&quot;' />
+                  <groupfilter from='&quot;Scuba Diving&quot;' function='range' level='[none:Activity:nk]' to='&quot;Small vessel with 13 men on board capsized crossing the bar and 6 men drowned.  The 7 survivors were swimming to shore&quot;' />
+                  <groupfilter from='&quot;Snorkeling – hunting crayfish and abalone&quot;' function='range' level='[none:Activity:nk]' to='&quot;Wade-fishing&quot;' />
+                  <groupfilter from='&quot;Wading (shrimping)&quot;' function='range' level='[none:Activity:nk]' to='&quot;Zosimo &amp; his son, Jeffrey Popa, failed to return from overnight fishing trip in a 14&apos; boat, Boat apparently sank, debris recovered but his son &amp; boat were never found&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Activity:nk]' direction='ASC' using='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+          <slices>
+            <column>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Activity:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+              <text column='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m2g37i0fgrje019us44u1pvod4t].[none:Activity:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{63BB7D11-D864-40E4-8BD8-D89EC722F5DC}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='84750' id='18' param='horz' type='layout-flow' w='98400' x='800' y='14250'>
+            <zone h='84750' id='7' param='horz' type='layout-flow' w='98400' x='800' y='14250'>
+              <zone h='84750' id='5' type='layout-basic' w='40200' x='800' y='14250'>
+                <zone h='42376' id='16' name='Top 10 shark attacks by activity' w='40200' x='800' y='14250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='298' h='42374' id='10' is-fixed='true' name='Number of attacks by type' w='40200' x='800' y='56626'>
+                  <layout-cache cell-count-w='1' non-cell-size-w='101' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='582' h='84750' id='20' is-fixed='true' type='layout-basic' w='58200' x='41000' y='14250'>
+                <zone h='84750' id='21' param='vert' type='layout-flow' w='58200' x='41000' y='14250'>
+                  <zone fixed-size='397' h='50625' id='11' is-fixed='true' name='Number of attacks in activity by injury' w='58200' x='41000' y='14250'>
+                    <layout-cache fixed-size-w='537' type-h='fixed' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='34125' id='9' name='Shark attacks by location' w='58200' x='41000' y='64875'>
+                    <layout-cache minheight='240' minwidth='202' type-h='scalable' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='13250' id='22' is-scaled='1' param='/Users/borjauria/Desktop/the shark attacks 2.png' type='bitmap' w='98400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='28' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='27' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='98' forceUpdate='true' h='13250' id='22' is-fixed='true' is-scaled='1' param='/Users/borjauria/Desktop/the shark attacks 2.png' type='bitmap' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42376' id='16' is-fixed='true' name='Top 10 shark attacks by activity' w='40200' x='800' y='14250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='50625' id='11' is-fixed='true' name='Number of attacks in activity by injury' w='58200' x='41000' y='14250'>
+                  <layout-cache fixed-size-w='537' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42374' id='10' is-fixed='true' name='Number of attacks by type' w='40200' x='800' y='56626'>
+                  <layout-cache cell-count-w='1' non-cell-size-w='101' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='265' h='34125' id='9' is-fixed='true' name='Shark attacks by location' w='58200' x='41000' y='64875'>
+                  <layout-cache minheight='240' minwidth='202' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5BB82D08-B367-4DBD-9459-824B3DC12D15}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='INTRO'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{31C3E9C5-2B0B-4348-BC38-753BEB4D3BE1}' />
+    </window>
+    <window class='worksheet' name='Top 10 shark attacks by activity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{C73936BF-D478-4798-ACE1-4B1C277BE79D}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Shark attacks by location'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{9B5FE895-2C81-4BD7-A803-C3416739C7F4}' />
+    </window>
+    <window class='worksheet' name='Number of attacks by type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{85546195-04BA-4D50-89D7-F4256FDEF5C3}' />
+    </window>
+    <window class='worksheet' name='Number of attacks in activity by injury'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card pane-specification-id='0' param='[federated.1m2g37i0fgrje019us44u1pvod4t].[sum:Number of Records:qk]' type='color' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{ACAA808B-3343-40DE-ABD1-D88DFCE83B81}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Number of attacks by type'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Number of attacks in activity by injury' />
+        <viewpoint name='Shark attacks by location'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 shark attacks by activity'>
+          <zoom type='fit-width' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{46BA12A5-D7EA-4DD9-95FD-450240034415}' />
+    </window>
+  </windows>
+</workbook>
