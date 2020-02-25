@@ -13,9 +13,7 @@ This is my second project in Iron Hack, in it you will be able to see the graphi
 ## _Prerequisites_ 💻
 
 I have worked with a data visualization tool called Tableau, 
-if you want you can install the latest version from here 👉🏻 [Tableau Software](https://www.tableau.com/)
-
-But really if you just want to see the analysis, you can see it in this Link of my Tableau Public profile 👉🏻 [Tableau Public profile](https://public.tableau.com/profile/borja4146#!/vizhome/AttacksofSharks/Story1/)
+if you want you can install the latest version from here 👉🏻 [Tableau Software](https://www.tableau.com/). But really if you just want to see the analysis, you can see it in this Link of my Tableau Public profile 👉🏻 [Tableau Public profile](https://public.tableau.com/profile/borja4146#!/vizhome/AttacksofSharks/Story1/)
 
 ## _How to use it_ 🔧
 
