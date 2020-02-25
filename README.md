@@ -10,14 +10,15 @@ This is my second project in Iron Hack, in it you will be able to see the graphi
 
 ## _Prerequisites_ 💻
 
-I have worked with a data visualization tool called Tableau, if you want you can install the latest version from here 👉🏻 
-[Tableau Software](https://www.tableau.com/)
+I have worked with a data visualization tool called Tableau, 
+if you want you can install the latest version from here 👉🏻 [Tableau Software](https://www.tableau.com/)
 
-But really if you just want to see the analysis I've done, you can see it in this Link of my Tableau Public profile 👉🏻 [Tableau Public profile](https://public.tableau.com/profile/borja4146#!/vizhome/AttacksofSharks/Story1/)
+But really if you just want to see the analysis I've done, you can see it in this Link 
+of my Tableau Public profile 👉🏻 [Tableau Public profile](https://public.tableau.com/profile/borja4146#!/vizhome/AttacksofSharks/Story1/)
 
 ## _How to use it_ 🔧
 
-If you want to use it, you can create a _env_, install the libraries that you will find in the `requirements.txt` file, clone the whole project and use the dataset `borjauria.db` to check what I have done with this project. To execute it you will have to open in a console the file `main.py`
+Click [here](https://public.tableau.com/profile/borja4146#!/vizhome/AttacksofSharks/Story1/) and enjoy it! 
 
 ## _Built With_ 
 
