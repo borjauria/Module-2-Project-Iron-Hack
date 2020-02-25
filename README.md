@@ -1,5 +1,5 @@
-# Module-2-Project-Iron-Hack
-This repository contains my module 2 project, in it I work with a database of the - Shark Attacks - and I do data reporting with Tableau. I use my knowledge to visualize and understand the data.
+# Module-2-Analysis of shark attacks in the US
+This repository contains my module 2 project, in it I work with a database of the _Shark Attacks_ and I do data reporting with Tableau. I use my knowledge to visualize and understand the data.
 
 ## _Status_
 This a beta version 1.0 of my second project at Iron hack.
