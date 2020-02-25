@@ -1,6 +1,6 @@
 ![Project 2](https://user-images.githubusercontent.com/45542785/75249314-5cd06300-57d6-11ea-814b-f731cd053105.png)
 
-# Module-2-Analysis of shark attacks in the USA
+# Analysis of shark attacks in the USA
 This repository contains my module 2 project, in it I work with a database of the _Shark Attacks_ and I do data reporting with Tableau. I use my knowledge to visualize and understand the data.
 
 ## _Status_
